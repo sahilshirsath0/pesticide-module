@@ -5,7 +5,16 @@ from disease_prediction import disease_bp
 
 app = Flask(__name__)
 
-CORS(app)
+CORS(app, resources={
+    r"/*": {
+        "origins": [
+            "http://localhost:5173",
+            "https://agrifrontend-tau.vercel.app"
+            "https://fertilizer-module.onrender.com"
+            "https://pesticide-module.onrender.com"
+        ]
+    }
+})
 
 app.register_blueprint(
     disease_bp,
