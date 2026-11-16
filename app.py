@@ -10,8 +10,6 @@ CORS(app, resources={
         "origins": [
             "http://localhost:5173",
             "https://agrifrontend-tau.vercel.app"
-            "https://fertilizer-module.onrender.com"
-            "https://pesticide-module.onrender.com"
         ]
     }
 })
